@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 class CustomTheme {
   ThemeData get lightTheme => ThemeData(
           brightness: Brightness.light,
-          scaffoldBackgroundColor: AppColors.primaryWhiteColor,
+          scaffoldBackgroundColor: AppColors.lightPrimaryColor,
           textTheme: AppTextThemes.lightTextTheme,
           iconTheme: const IconThemeData(color: AppColors.primaryDarkGreyColor),
           extensions: <ThemeExtension<dynamic>>[
@@ -19,7 +19,7 @@ class CustomTheme {
 
   ThemeData get darkTheme => ThemeData(
           brightness: Brightness.dark,
-          scaffoldBackgroundColor: AppColors.primaryDarkGreyColor,
+          scaffoldBackgroundColor: AppColors.primaryColor,
           textTheme: AppTextThemes.darkTextTheme,
           iconTheme: const IconThemeData(color: AppColors.primaryWhiteColor),
           extensions: <ThemeExtension<dynamic>>[

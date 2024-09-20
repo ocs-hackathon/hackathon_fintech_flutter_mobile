@@ -2,8 +2,8 @@ import 'package:hackathon_fintech_flutter_mobile/shared/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AppDecoration {
-  static BoxDecoration mainBackgroundDecoration = BoxDecoration(
-    gradient: AppColors.primaryGradient,
+  static BoxDecoration mainBackgroundDecoration = const BoxDecoration(
+    color: AppColors.primaryLightGreyColor,
   );
   static BoxDecoration mainButtonPrimaryDecoration = BoxDecoration(
       borderRadius: BorderRadius.circular(10),
@@ -38,23 +38,11 @@ class AppDecoration {
     color: AppColors.primaryWhiteColor,
   );
 
-  static BoxDecoration gradientTabIndicator = BoxDecoration(
-    borderRadius: const BorderRadius.vertical(top: Radius.circular(10)),
-    gradient: LinearGradient(
-      colors: [AppColors.primaryColor, AppColors.secondaryColor],
-      begin: Alignment.centerLeft,
-      end: Alignment.centerRight,
-    ),
-  );
-
   static BoxDecoration cardDecoration = BoxDecoration(
-      color: AppColors.primaryWhiteColor,
-      boxShadow: [
-        BoxShadow(
-            blurRadius: 20,
-            offset: const Offset(-2, -2),
-            color: AppColors.primaryBlackColor.withOpacity(0.1)),
-      ],
+      color: AppColors.primaryDarkGreyColor,
+      borderRadius: BorderRadius.circular(10));
+  static BoxDecoration lightCardDecoration = BoxDecoration(
+      color: AppColors.lightPrimaryColor,
       borderRadius: BorderRadius.circular(10));
 
   static BoxDecoration mainBorderedTextFieldDecoration = BoxDecoration(

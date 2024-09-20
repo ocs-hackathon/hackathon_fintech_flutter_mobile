@@ -40,7 +40,7 @@ class _BaseLoadingIndicatorState extends State<BaseLoadingIndicator>
             height: 80,
             width: 80,
             child: CircularProgressIndicator(
-              backgroundColor: AppColors.secondaryColor,
+              backgroundColor: AppColors.primaryDarkGreyColor,
               color: AppColors.primaryColor,
               strokeWidth: 10,
               strokeCap: StrokeCap.butt,

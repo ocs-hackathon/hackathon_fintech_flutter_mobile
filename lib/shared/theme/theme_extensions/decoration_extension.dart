@@ -10,6 +10,7 @@ class AppDecorationExtension extends ThemeExtension<AppDecorationExtension> {
   final BoxDecoration? flatButtonPrimaryDecoration;
   final BoxDecoration? mainBorderedDecoration;
   final BoxDecoration? cardDecoration;
+  final BoxDecoration? lightCardDecoration;
   final BoxDecoration? lightBorderedDecoration;
 
   const AppDecorationExtension({
@@ -19,6 +20,7 @@ class AppDecorationExtension extends ThemeExtension<AppDecorationExtension> {
     required this.flatButtonPrimaryDecoration,
     required this.mainBorderedDecoration,
     required this.cardDecoration,
+    required this.lightCardDecoration,
     required this.lightBorderedDecoration,
   });
 
@@ -33,6 +35,7 @@ class AppDecorationExtension extends ThemeExtension<AppDecorationExtension> {
     InputDecoration? linearTextfieldDecoration,
     InputDecoration? mainBorderedTextFieldInputDecoration,
     BoxDecoration? cardDecoration,
+    BoxDecoration? lightCardDecoration,
     BoxDecoration? lightBorderedDecoration,
   }) {
     return AppDecorationExtension(
@@ -47,6 +50,7 @@ class AppDecorationExtension extends ThemeExtension<AppDecorationExtension> {
       mainBorderedDecoration:
           mainBorderedDecoration ?? this.mainBorderedDecoration!,
       cardDecoration: cardDecoration ?? this.cardDecoration!,
+      lightCardDecoration: lightCardDecoration ?? this.lightCardDecoration,
       lightBorderedDecoration:
           lightBorderedDecoration ?? this.lightBorderedDecoration!,
     );
@@ -72,6 +76,8 @@ class AppDecorationExtension extends ThemeExtension<AppDecorationExtension> {
           mainBorderedDecoration, other.mainBorderedDecoration, t),
       cardDecoration:
           BoxDecoration.lerp(cardDecoration, other.cardDecoration, t),
+      lightCardDecoration:
+          BoxDecoration.lerp(cardDecoration, other.cardDecoration, t),
       lightBorderedDecoration: BoxDecoration.lerp(
           lightBorderedDecoration, other.lightBorderedDecoration, t),
     );
@@ -84,12 +90,13 @@ class AppDecorationExtension extends ThemeExtension<AppDecorationExtension> {
     flatButtonPrimaryDecoration: AppDecoration.flatButtonPrimaryDecoration,
     mainBorderedDecoration: AppDecoration.mainBorderedDecoration,
     cardDecoration: AppDecoration.cardDecoration,
+    lightCardDecoration: AppDecoration.lightCardDecoration,
     lightBorderedDecoration: AppDecoration.lightBorderedDecoration,
   );
 
   static AppDecorationExtension dark = AppDecorationExtension(
     mainBackgroundDecoration: AppDecoration.mainBackgroundDecoration
-        .copyWith(gradient: AppColors.primaryGradient),
+        .copyWith(color: AppColors.primaryColor),
     mainButtonPrimaryDecoration: AppDecoration.mainButtonPrimaryDecoration
         .copyWith(color: AppColors.primaryDarkGreyColor),
     mainButtonSecondaryDecoration: AppDecoration.mainButtonSecondaryDecoration
@@ -100,7 +107,10 @@ class AppDecorationExtension extends ThemeExtension<AppDecorationExtension> {
         color: AppColors.primaryDarkGreyColor,
         border: Border.all(color: AppColors.primaryWhiteColor)),
     cardDecoration: AppDecoration.cardDecoration.copyWith(
-      color: AppColors.primaryDarkGreyColor,
+      color: AppColors.secondaryLightGreyColor,
+    ),
+    lightCardDecoration: AppDecoration.lightCardDecoration.copyWith(
+      color: AppColors.secondaryLightGreyColor,
     ),
     lightBorderedDecoration: AppDecoration.lightBorderedDecoration.copyWith(
       color: AppColors.primaryDarkGreyColor,

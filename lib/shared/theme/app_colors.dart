@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   // primarly used for gradients
-  static Color primaryColor = const Color(0xFF00FF66).withOpacity(0.4);
-  static const Color secondaryColor = Color(0xFF05A2E6);
+  static const Color primaryColor = Color(0xFF2F283B);
 
   // main black color used in e.g description texts
   static const Color primaryBlackColor = Color(0xFF000000);
@@ -11,23 +10,19 @@ class AppColors {
   // main white color used in e.g main styles/themes in a darker backgrounds
   static const Color primaryWhiteColor = Color(0xFFFFFFFF);
 
+  static const Color lightPrimaryColor = Color(0xFF5D5669);
+
   // dark grey used in e.g buttons
-  static const Color primaryDarkGreyColor = Color(0xFF282E3F);
+  static const Color primaryDarkGreyColor = Color(0xFF18181B);
 
   // light grey used in e.g light description texts
-  static const Color primaryLightGreyColor = Color(0xFF858C94);
+  static const Color primaryLightGreyColor = Color(0xFF27272A);
 
   // secondary light grey used in e.g background/disabled sections
-  static const Color secondaryLightGreyColor = Color(0xFFE6E6E6);
+  static const Color secondaryLightGreyColor = Color(0xFFF4F4F5);
 
   // light grey used in e.g textfield's border
-  static Color textfieldHintGrey = const Color(0xFFB2B2B2);
+  static const Color textfieldHintGrey = Color(0xFFB2B2B2);
 
   // Gradients
-
-  static LinearGradient primaryGradient = LinearGradient(
-    colors: [primaryColor, secondaryColor],
-    begin: Alignment.topCenter,
-    end: Alignment.bottomCenter,
-  );
 }

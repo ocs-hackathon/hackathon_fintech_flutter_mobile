@@ -36,7 +36,7 @@ class AppTextThemes with AppTextStyles {
         bodySmall: AppTextStyles.bodySmall
             .copyWith(color: AppColors.primaryWhiteColor),
         labelMedium: AppTextStyles.labelMedium
-            .copyWith(color: AppColors.primaryBlackColor),
+            .copyWith(color: AppColors.primaryWhiteColor),
         labelLarge: AppTextStyles.labelLarge
             .copyWith(color: AppColors.primaryWhiteColor),
         labelSmall: AppTextStyles.labelSmall
@@ -111,21 +111,21 @@ mixin AppTextStyles {
   static TextStyle labelLarge = _defaultTextTheme.labelLarge!.copyWith(
     fontSize: 20,
     fontWeight: FontWeight.w700,
-    color: AppColors.primaryDarkGreyColor,
+    color: AppColors.primaryWhiteColor,
   );
 
   // medium button text style
   static TextStyle labelMedium = _defaultTextTheme.labelMedium!.copyWith(
     fontSize: 16,
     fontWeight: FontWeight.w600,
-    color: AppColors.primaryBlackColor,
+    color: AppColors.primaryWhiteColor,
   );
 
   // light text button text style
   static TextStyle labelSmall = _defaultTextTheme.labelSmall!.copyWith(
     fontSize: 14,
     fontWeight: FontWeight.w500,
-    color: AppColors.primaryBlackColor,
+    color: AppColors.primaryWhiteColor,
   );
 
   // extra text styles
