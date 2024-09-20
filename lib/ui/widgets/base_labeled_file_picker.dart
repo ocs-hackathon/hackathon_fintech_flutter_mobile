@@ -77,7 +77,7 @@ class _BaseLabeledFilePickerState extends State<BaseLabeledFilePicker> {
           if (!isDisabled) {
             await FilePicker.platform.pickFiles(
                 type: FileType.custom,
-                allowedExtensions: [".jpg", ".pdf", ".png"]).then((value) {
+                allowedExtensions: ["jpg", "pdf", "png"]).then((value) {
               if (value != null && value.files.isNotEmpty) {
                 setState(() {
                   result = value.files.first.path;
