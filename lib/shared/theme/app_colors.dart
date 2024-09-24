@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  // primarly used for gradients
   static const Color primaryColor = Color(0xFF2F283B);
 
   // main black color used in e.g description texts

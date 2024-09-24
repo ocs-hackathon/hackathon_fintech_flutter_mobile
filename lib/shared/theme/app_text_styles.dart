@@ -18,58 +18,24 @@ class AppTextThemes with AppTextStyles {
         labelSmall: AppTextStyles.labelSmall,
       );
 
-  static TextTheme get darkTextTheme => TextTheme(
-        titleLarge: AppTextStyles.titleLarge
-            .copyWith(color: AppColors.primaryDarkGreyColor),
-        titleMedium: AppTextStyles.titleMedium
-            .copyWith(color: AppColors.primaryDarkGreyColor),
-        titleSmall: AppTextStyles.titleSmall
-            .copyWith(color: AppColors.primaryDarkGreyColor),
-        headlineMedium: AppTextStyles.headlineMedium
-            .copyWith(color: AppColors.primaryDarkGreyColor),
-        headlineSmall: AppTextStyles.headlineSmall
-            .copyWith(color: AppColors.primaryDarkGreyColor),
-        bodyLarge: AppTextStyles.bodyLarge
-            .copyWith(color: AppColors.primaryDarkGreyColor),
-        bodyMedium: AppTextStyles.bodyMedium
-            .copyWith(color: AppColors.primaryDarkGreyColor),
-        bodySmall: AppTextStyles.bodySmall
-            .copyWith(color: AppColors.primaryDarkGreyColor),
-        labelMedium: AppTextStyles.labelMedium
-            .copyWith(color: AppColors.primaryDarkGreyColor),
-        labelLarge: AppTextStyles.labelLarge
-            .copyWith(color: AppColors.primaryDarkGreyColor),
-        labelSmall: AppTextStyles.labelSmall
-            .copyWith(color: AppColors.primaryDarkGreyColor),
-      );
-
   static TextTheme get currentTextTheme => Get.textTheme;
 }
 
 mixin AppTextStyles {
-  static TextTheme get _defaultTextTheme => GoogleFonts.poppinsTextTheme();
-  static TextTheme get _secondaryTextTheme => GoogleFonts.poppinsTextTheme();
+  static TextTheme get _defaultTextTheme => GoogleFonts.interTextTheme();
 
-  /* The following text styles are those bound to be directly linked with Flutter's 
-  Material Text Theme. They are meant to override the default styles found in
-  the TextTheme class. Extra text styles are declared later on within this class
-  */
-
-  // light title e.g "Welcome to"
   static TextStyle titleLarge = _defaultTextTheme.titleLarge!.copyWith(
     fontSize: 43,
     fontWeight: FontWeight.w500,
     color: AppColors.primaryDarkGreyColor,
   );
 
-  // bold title with smaller font size e.g "Apply Online"
   static TextStyle titleMedium = _defaultTextTheme.titleMedium!.copyWith(
     fontSize: 24,
     fontWeight: FontWeight.w900,
     color: AppColors.primaryDarkGreyColor,
   );
 
-  // light thin title e.g "Available Products"
   static TextStyle titleSmall = _defaultTextTheme.titleSmall!.copyWith(
     fontSize: 24,
     fontWeight: FontWeight.w700,
@@ -88,14 +54,13 @@ mixin AppTextStyles {
     color: AppColors.primaryLightGreyColor,
   );
 
-  // main body text
   static TextStyle bodyLarge = _defaultTextTheme.bodyLarge!.copyWith(
     fontSize: 16,
     fontWeight: FontWeight.w600,
     color: AppColors.primaryBlackColor,
   );
 
-  static TextStyle bodyMedium = _secondaryTextTheme.bodyMedium!.copyWith(
+  static TextStyle bodyMedium = _defaultTextTheme.bodyMedium!.copyWith(
     fontSize: 14,
     fontWeight: FontWeight.w400,
     color: AppColors.primaryBlackColor,
@@ -107,30 +72,24 @@ mixin AppTextStyles {
     color: AppColors.primaryBlackColor,
   );
 
-  // bold button text style
   static TextStyle labelLarge = _defaultTextTheme.labelLarge!.copyWith(
     fontSize: 20,
     fontWeight: FontWeight.w700,
     color: AppColors.primaryDarkGreyColor,
   );
 
-  // medium button text style
   static TextStyle labelMedium = _defaultTextTheme.labelMedium!.copyWith(
     fontSize: 16,
     fontWeight: FontWeight.w600,
-    color: AppColors.primaryDarkGreyColor,
+    color: AppColors.primaryWhiteColor,
   );
 
-  // light text button text style
   static TextStyle labelSmall = _defaultTextTheme.labelSmall!.copyWith(
     fontSize: 14,
     fontWeight: FontWeight.w500,
     color: AppColors.primaryDarkGreyColor,
   );
 
-  // extra text styles
-
-  // large app name style
   static TextStyle titleExtraLarge = _defaultTextTheme.headlineLarge!.copyWith(
     fontSize: 102,
     fontWeight: FontWeight.w700,
@@ -138,7 +97,6 @@ mixin AppTextStyles {
     height: 1.2,
   );
 
-  // card text styles used in the loan product card
   static TextStyle cardTitleLarge = _defaultTextTheme.headlineLarge!.copyWith(
     fontSize: 20,
     fontWeight: FontWeight.w400,
@@ -175,27 +133,25 @@ mixin AppTextStyles {
     color: AppColors.primaryDarkGreyColor,
   );
 
-  // form field text styles
-  static TextStyle formFieldBody = _secondaryTextTheme.headlineMedium!.copyWith(
+  static TextStyle formFieldBody = _defaultTextTheme.headlineMedium!.copyWith(
     fontSize: 16,
     fontWeight: FontWeight.w600,
     color: AppColors.primaryBlackColor,
   );
 
-  static TextStyle formFieldLabel =
-      _secondaryTextTheme.headlineMedium!.copyWith(
+  static TextStyle formFieldLabel = _defaultTextTheme.headlineMedium!.copyWith(
     fontSize: 14,
     fontWeight: FontWeight.w600,
     color: AppColors.primaryDarkGreyColor,
   );
 
-  static TextStyle formFieldHint = _secondaryTextTheme.headlineSmall!.copyWith(
+  static TextStyle formFieldHint = _defaultTextTheme.headlineSmall!.copyWith(
     fontSize: 14,
     fontWeight: FontWeight.w400,
     color: AppColors.textfieldHintGrey,
   );
 
-  static TextStyle formFieldError = _secondaryTextTheme.headlineSmall!.copyWith(
+  static TextStyle formFieldError = _defaultTextTheme.headlineSmall!.copyWith(
     fontSize: 12,
     fontWeight: FontWeight.w400,
     color: Colors.red,
@@ -203,18 +159,15 @@ mixin AppTextStyles {
 }
 
 extension OtherTextStyles on TextTheme {
-  // hint text style
-  TextStyle get hintMedium =>
-      GoogleFonts.redHatDisplayTextTheme().bodyMedium!.copyWith(
-            fontSize: 16,
-            fontWeight: FontWeight.w500,
-            color: AppColors.primaryLightGreyColor,
-          );
+  TextStyle get hintMedium => GoogleFonts.interTextTheme().bodyMedium!.copyWith(
+        fontSize: 16,
+        fontWeight: FontWeight.w500,
+        color: AppColors.primaryLightGreyColor,
+      );
 
-  TextStyle get hintSmall =>
-      GoogleFonts.redHatDisplayTextTheme().bodyMedium!.copyWith(
-            fontSize: 10,
-            fontWeight: FontWeight.w400,
-            color: AppColors.primaryLightGreyColor,
-          );
+  TextStyle get hintSmall => GoogleFonts.interTextTheme().bodyMedium!.copyWith(
+        fontSize: 10,
+        fontWeight: FontWeight.w400,
+        color: AppColors.primaryLightGreyColor,
+      );
 }

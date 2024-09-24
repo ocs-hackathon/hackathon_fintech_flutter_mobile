@@ -1,58 +1,38 @@
-import 'package:hackathon_fintech_flutter_mobile/shared/theme/app_colors.dart';
-import 'package:hackathon_fintech_flutter_mobile/shared/theme/app_decoration.dart';
 import 'package:flutter/material.dart';
+import 'package:hackathon_fintech_flutter_mobile/shared/theme/app_decoration.dart';
 
 @immutable
 class AppDecorationExtension extends ThemeExtension<AppDecorationExtension> {
   final BoxDecoration? mainBackgroundDecoration;
   final BoxDecoration? mainButtonPrimaryDecoration;
-  final BoxDecoration? mainButtonSecondaryDecoration;
-  final BoxDecoration? flatButtonPrimaryDecoration;
-  final BoxDecoration? mainBorderedDecoration;
+
   final BoxDecoration? cardDecoration;
   final BoxDecoration? lightCardDecoration;
-  final BoxDecoration? lightBorderedDecoration;
 
   const AppDecorationExtension({
     required this.mainBackgroundDecoration,
     required this.mainButtonPrimaryDecoration,
-    required this.mainButtonSecondaryDecoration,
-    required this.flatButtonPrimaryDecoration,
-    required this.mainBorderedDecoration,
     required this.cardDecoration,
     required this.lightCardDecoration,
-    required this.lightBorderedDecoration,
   });
 
   @override
   ThemeExtension<AppDecorationExtension> copyWith({
     BoxDecoration? mainBackgroundDecoration,
     BoxDecoration? mainButtonPrimaryDecoration,
-    BoxDecoration? mainButtonSecondaryDecoration,
-    BoxDecoration? flatButtonPrimaryDecoration,
-    BoxDecoration? mainBorderedDecoration,
     BoxDecoration? mainBorderedTextFieldDecoration,
     InputDecoration? linearTextfieldDecoration,
     InputDecoration? mainBorderedTextFieldInputDecoration,
     BoxDecoration? cardDecoration,
     BoxDecoration? lightCardDecoration,
-    BoxDecoration? lightBorderedDecoration,
   }) {
     return AppDecorationExtension(
       mainBackgroundDecoration:
           mainBackgroundDecoration ?? this.mainBackgroundDecoration!,
       mainButtonPrimaryDecoration:
           mainButtonPrimaryDecoration ?? this.mainButtonPrimaryDecoration!,
-      mainButtonSecondaryDecoration:
-          mainButtonSecondaryDecoration ?? this.mainButtonSecondaryDecoration!,
-      flatButtonPrimaryDecoration:
-          flatButtonPrimaryDecoration ?? this.flatButtonPrimaryDecoration!,
-      mainBorderedDecoration:
-          mainBorderedDecoration ?? this.mainBorderedDecoration!,
       cardDecoration: cardDecoration ?? this.cardDecoration!,
       lightCardDecoration: lightCardDecoration ?? this.lightCardDecoration,
-      lightBorderedDecoration:
-          lightBorderedDecoration ?? this.lightBorderedDecoration!,
     );
   }
 
@@ -66,51 +46,17 @@ class AppDecorationExtension extends ThemeExtension<AppDecorationExtension> {
           mainBackgroundDecoration, other.mainBackgroundDecoration, t),
       mainButtonPrimaryDecoration: BoxDecoration.lerp(
           mainButtonPrimaryDecoration, other.mainButtonPrimaryDecoration, t),
-      mainButtonSecondaryDecoration: BoxDecoration.lerp(
-          mainButtonSecondaryDecoration,
-          other.mainButtonSecondaryDecoration,
-          t),
-      flatButtonPrimaryDecoration: BoxDecoration.lerp(
-          flatButtonPrimaryDecoration, other.flatButtonPrimaryDecoration, t),
-      mainBorderedDecoration: BoxDecoration.lerp(
-          mainBorderedDecoration, other.mainBorderedDecoration, t),
       cardDecoration:
           BoxDecoration.lerp(cardDecoration, other.cardDecoration, t),
       lightCardDecoration:
-          BoxDecoration.lerp(cardDecoration, other.cardDecoration, t),
-      lightBorderedDecoration: BoxDecoration.lerp(
-          lightBorderedDecoration, other.lightBorderedDecoration, t),
+          BoxDecoration.lerp(lightCardDecoration, other.lightCardDecoration, t),
     );
   }
 
   static AppDecorationExtension light = AppDecorationExtension(
     mainBackgroundDecoration: AppDecoration.mainBackgroundDecoration,
     mainButtonPrimaryDecoration: AppDecoration.mainButtonPrimaryDecoration,
-    mainButtonSecondaryDecoration: AppDecoration.mainButtonSecondaryDecoration,
-    flatButtonPrimaryDecoration: AppDecoration.flatButtonPrimaryDecoration,
-    mainBorderedDecoration: AppDecoration.mainBorderedDecoration,
     cardDecoration: AppDecoration.cardDecoration,
     lightCardDecoration: AppDecoration.lightCardDecoration,
-    lightBorderedDecoration: AppDecoration.lightBorderedDecoration,
-  );
-
-  static AppDecorationExtension dark = AppDecorationExtension(
-    mainBackgroundDecoration: AppDecoration.mainBackgroundDecoration
-        .copyWith(color: AppColors.primaryColor),
-    mainButtonPrimaryDecoration: AppDecoration.mainButtonPrimaryDecoration
-        .copyWith(color: AppColors.primaryDarkGreyColor),
-    mainButtonSecondaryDecoration: AppDecoration.mainButtonSecondaryDecoration
-        .copyWith(color: AppColors.primaryWhiteColor),
-    flatButtonPrimaryDecoration: AppDecoration.flatButtonPrimaryDecoration
-        .copyWith(color: AppColors.primaryDarkGreyColor),
-    mainBorderedDecoration: AppDecoration.mainBorderedDecoration.copyWith(
-        color: AppColors.primaryDarkGreyColor,
-        border: Border.all(color: AppColors.primaryWhiteColor)),
-    cardDecoration: AppDecoration.cardDecoration,
-    lightCardDecoration: AppDecoration.lightCardDecoration,
-    lightBorderedDecoration: AppDecoration.lightBorderedDecoration.copyWith(
-      color: AppColors.primaryDarkGreyColor,
-      border: Border.all(color: AppColors.primaryWhiteColor, width: 0.5),
-    ),
   );
 }

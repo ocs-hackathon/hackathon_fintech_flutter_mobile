@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 
 class AppDecoration {
   static BoxDecoration mainBackgroundDecoration = const BoxDecoration(
-    color: AppColors.primaryLightGreyColor,
+    color: AppColors.primaryWhiteColor,
   );
   static BoxDecoration mainButtonPrimaryDecoration = BoxDecoration(
-      borderRadius: BorderRadius.circular(10),
-      color: AppColors.primaryWhiteColor,
+      borderRadius: BorderRadius.circular(50),
+      color: AppColors.primaryLightGreyColor,
       boxShadow: [
         BoxShadow(
             offset: const Offset(0, 4),
@@ -15,73 +15,24 @@ class AppDecoration {
             spreadRadius: 0,
             color: AppColors.primaryBlackColor.withOpacity(0.25))
       ]);
-
-  static BoxDecoration mainButtonSecondaryDecoration = BoxDecoration(
-    borderRadius: BorderRadius.circular(10),
-    color: AppColors.primaryDarkGreyColor,
-  );
-
-  static BoxDecoration mainBorderedDecoration = BoxDecoration(
-    borderRadius: BorderRadius.circular(10),
-    border: Border.all(
-      color: AppColors.primaryDarkGreyColor,
-    ),
-    color: AppColors.primaryWhiteColor,
-  );
-
-  static BoxDecoration lightBorderedDecoration = BoxDecoration(
-    borderRadius: BorderRadius.circular(10),
-    border: Border.all(
-      color: AppColors.secondaryLightGreyColor,
-      width: 0.5,
-    ),
-    color: AppColors.primaryWhiteColor,
-  );
-
   static BoxDecoration cardDecoration = BoxDecoration(
       color: AppColors.primaryDarkGreyColor,
       borderRadius: BorderRadius.circular(10));
   static BoxDecoration lightCardDecoration = BoxDecoration(
-      color: AppColors.lightPrimaryColor,
-      borderRadius: BorderRadius.circular(10));
+    color: AppColors.primaryLightGreyColor.withOpacity(0.1),
+    border: Border.all(color: AppColors.primaryBlackColor),
+    borderRadius: const BorderRadius.all(
+      Radius.circular(10),
+    ),
+  );
 
   static BoxDecoration mainBorderedTextFieldDecoration = BoxDecoration(
-    color: AppColors.primaryWhiteColor.withOpacity(0.7),
+    color: AppColors.primaryLightGreyColor.withOpacity(0.1),
+    border: Border.all(color: AppColors.primaryBlackColor),
     borderRadius: const BorderRadius.all(
-      Radius.circular(15),
+      Radius.circular(50),
     ),
   );
-
-  static BoxDecoration flatButtonPrimaryDecoration = BoxDecoration(
-    borderRadius: BorderRadius.circular(6),
-    border: Border.all(color: AppColors.primaryDarkGreyColor),
-  );
-
-  static BoxDecoration productCardDecoration = const BoxDecoration(
-    borderRadius: BorderRadius.all(
-      Radius.circular(15),
-    ),
-  );
-
-  static BoxDecoration productCardIconBoxDecoration = BoxDecoration(
-    color: AppColors.primaryColor,
-    borderRadius: const BorderRadius.all(
-      Radius.circular(7),
-    ),
-  );
-
-  static InputDecoration linearTextfieldDecoration = const InputDecoration(
-    enabledBorder: OutlineInputBorder(
-        borderSide: BorderSide(
-          color: Colors.black,
-        ),
-        borderRadius: BorderRadius.all(Radius.circular(10))),
-    contentPadding: EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-    focusedBorder: OutlineInputBorder(
-        borderSide: BorderSide(style: BorderStyle.solid),
-        borderRadius: BorderRadius.all(Radius.circular(10))),
-  );
-
   static InputDecoration mainBorderedTextFieldInputDecoration =
       const InputDecoration(
     errorStyle: TextStyle(

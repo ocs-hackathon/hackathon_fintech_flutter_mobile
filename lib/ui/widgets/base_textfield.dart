@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon_fintech_flutter_mobile/shared/theme/theme_extensions/form_field_styles.dart';
-import 'package:hackathon_fintech_flutter_mobile/ui/widgets/base_labeled_widget.dart';
+import 'package:hackathon_fintech_flutter_mobile/ui/widgets/base_widget.dart';
 import 'package:pinput/pinput.dart';
 
-class BaseLabeledTextField extends StatefulWidget {
+class BaseTextField extends StatefulWidget {
   final String label;
   final String hint;
   final Function(String)? onChanged;
@@ -18,7 +18,7 @@ class BaseLabeledTextField extends StatefulWidget {
   final String? prefixText;
   final Widget? suffixIcon;
   final bool isCurrency;
-  const BaseLabeledTextField(
+  const BaseTextField(
       {required this.label,
       required this.hint,
       this.onChanged,
@@ -36,10 +36,10 @@ class BaseLabeledTextField extends StatefulWidget {
       super.key});
 
   @override
-  State<BaseLabeledTextField> createState() => _BaseLabeledTextFieldState();
+  State<BaseTextField> createState() => _BaseTextFieldState();
 }
 
-class _BaseLabeledTextFieldState extends State<BaseLabeledTextField> {
+class _BaseTextFieldState extends State<BaseTextField> {
   String? _errorText;
   TextEditingController controller = TextEditingController();
   final FocusNode _focusNode = FocusNode();
@@ -71,7 +71,7 @@ class _BaseLabeledTextFieldState extends State<BaseLabeledTextField> {
   @override
   Widget build(BuildContext context) {
     var styles = Theme.of(context).extension<FormFieldStylesExtenstion>()!;
-    return BaseLabeledWidget(
+    return BaseWidget(
       label: widget.label,
       errorText: _errorText,
       extra: widget.extra,
@@ -89,7 +89,6 @@ class _BaseLabeledTextFieldState extends State<BaseLabeledTextField> {
         },
         controller: controller,
         decoration: styles.mainBorderedTextFieldInputDecoration!.copyWith(
-          hintText: widget.hint,
           prefixIconConstraints: BoxConstraints(
               maxWidth: !widget.isPhoneField ? 30 : double.infinity),
           suffixIcon: widget.suffixIcon,

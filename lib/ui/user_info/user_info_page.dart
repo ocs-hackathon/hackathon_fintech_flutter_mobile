@@ -2,19 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hackathon_fintech_flutter_mobile/shared/routes/app_routes.dart';
 import 'package:hackathon_fintech_flutter_mobile/ui/widgets/base_date_picker.dart';
-import 'package:hackathon_fintech_flutter_mobile/ui/widgets/base_labeled_dropdown.dart';
-import 'package:hackathon_fintech_flutter_mobile/ui/widgets/base_labeled_textfield.dart';
-import 'package:hackathon_fintech_flutter_mobile/ui/widgets/base_rich_titled_page.dart';
+import 'package:hackathon_fintech_flutter_mobile/ui/widgets/base_dropdown.dart';
+import 'package:hackathon_fintech_flutter_mobile/ui/widgets/base_upload_button.dart';
+import 'package:hackathon_fintech_flutter_mobile/ui/widgets/base_textfield.dart';
+import 'package:hackathon_fintech_flutter_mobile/ui/widgets/base_page_with_label.dart';
 import 'package:hackathon_fintech_flutter_mobile/utils/constants/data_constants/ui_constants.dart';
 
-class KycSelfInfoPage extends StatefulWidget {
-  const KycSelfInfoPage({super.key});
+class UserInformationPage extends StatefulWidget {
+  const UserInformationPage({super.key});
 
   @override
-  State<KycSelfInfoPage> createState() => _KycSelfInfoPageState();
+  State<UserInformationPage> createState() => _UserInformationPageState();
 }
 
-class _KycSelfInfoPageState extends State<KycSelfInfoPage> {
+class _UserInformationPageState extends State<UserInformationPage> {
   final _formKey = GlobalKey<FormState>();
   var selectableCities = <Map<String, String>>[];
   var selectableZones = <Map<String, String>>[];
@@ -27,9 +28,8 @@ class _KycSelfInfoPageState extends State<KycSelfInfoPage> {
 
   @override
   Widget build(BuildContext context) {
-    return BaseTitledPage(
+    return BasePageWithLabel(
       title: "Please Enter The Following Informations",
-      withPadding: true,
       children: [
         Form(
           key: _formKey,
@@ -38,42 +38,50 @@ class _KycSelfInfoPageState extends State<KycSelfInfoPage> {
               kVerticalGap20,
               Column(
                 children: [
-                  const BaseLabeledTextField(
+                  const BaseTextField(
                     label: "First Name",
                     hint: "Enter your First name",
                   ),
-                  const BaseLabeledTextField(
+                  const BaseTextField(
                     label: "Middle Name",
                     hint: "Enter your Middle name",
                   ),
-                  const BaseLabeledTextField(
+                  const BaseTextField(
                     label: "Last Name",
                     hint: "Enter your Last name",
                   ),
-                  const BaseLabeledTextField(
+                  const BaseTextField(
                     label: "Phone Number",
                     hint: "Enter your phone number",
                     keyboardType: TextInputType.phone,
                   ),
-                  const BaseLabeledDropdown(
+                  const BaseDropdown(
                     label: "Gender",
                     hint: "Select Gender",
                     items: {"MALE": "Male", "FEMALE": "Female"},
                   ),
-                  BaseLabeledDateTimeFormField(
+                  BaseDateTimeFormField(
                     label: "Birth Date",
                     hint: "01/01/1991",
                     lastDate:
                         DateTime.now().subtract(const Duration(days: 365 * 18)),
                   ),
-                  const BaseLabeledDropdown(
+                  const BaseDropdown(
                     label: "Prefered Bank",
                     hint: "Prefered Bank",
                     items: {"CBE": "CBE", "ABYSSINIA": "Abyssinia"},
                   ),
-                  const BaseLabeledTextField(
+                  const BaseTextField(
                     label: "Bank Account Number",
                     hint: "Enter Bank Account",
+                  ),
+                  const BaseUploadButton(
+                    label: "National Id",
+                    hint: "Upload your national id",
+                  ),
+                  const BaseUploadButton(
+                    label: "Bank Statement",
+                    hint: "Upload your Bank Statement",
                   ),
                 ],
               ),

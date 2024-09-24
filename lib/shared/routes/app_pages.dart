@@ -2,8 +2,7 @@ import 'package:get/get.dart';
 import 'package:hackathon_fintech_flutter_mobile/ui/auth/login_page.dart';
 import 'package:hackathon_fintech_flutter_mobile/ui/auth/signup_page.dart';
 import 'package:hackathon_fintech_flutter_mobile/ui/home/home_page.dart';
-import 'package:hackathon_fintech_flutter_mobile/ui/kyc_pages/kyc_document_upload_page.dart';
-import 'package:hackathon_fintech_flutter_mobile/ui/kyc_pages/kyc_self_info_page.dart';
+import 'package:hackathon_fintech_flutter_mobile/ui/user_info/user_info_page.dart';
 
 import 'app_routes.dart';
 
@@ -21,14 +20,9 @@ abstract class AppPages {
 
     //kyc
     GetPage(
-      name: AppRoutes.kycSelfInfoPage,
-      page: () => const KycSelfInfoPage(),
+      name: AppRoutes.userInformationPage,
+      page: () => const UserInformationPage(),
     ),
-    GetPage(
-      name: AppRoutes.kycDocumentUploadPage,
-      page: () => const KycDocumentUploadPage(),
-    ),
-
     // home
     GetPage(
       name: AppRoutes.homePage,

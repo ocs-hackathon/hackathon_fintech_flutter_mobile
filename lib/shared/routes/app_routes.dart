@@ -3,7 +3,7 @@ abstract class AppRoutes {
   static const String loginPage = '/login_page';
 
   //kyc
-  static const String kycSelfInfoPage = '/kyc_self';
+  static const String userInformationPage = '/kyc_self';
   static const String kycDocumentUploadPage = '/kyc_doc';
 
   //home

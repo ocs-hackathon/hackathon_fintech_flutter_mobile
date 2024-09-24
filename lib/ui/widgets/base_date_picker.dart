@@ -1,10 +1,10 @@
 import 'package:hackathon_fintech_flutter_mobile/shared/theme/theme_extensions/form_field_styles.dart';
-import 'package:hackathon_fintech_flutter_mobile/ui/widgets/base_labeled_widget.dart';
+import 'package:hackathon_fintech_flutter_mobile/ui/widgets/base_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class BaseLabeledDateTimeFormField extends FormField<DateTime?> {
-  BaseLabeledDateTimeFormField({
+class BaseDateTimeFormField extends FormField<DateTime?> {
+  BaseDateTimeFormField({
     super.key,
     super.validator,
     super.autovalidateMode,
@@ -22,7 +22,7 @@ class BaseLabeledDateTimeFormField extends FormField<DateTime?> {
             }
           }
 
-          return BaseLabeledDatetimePicker(
+          return BaseDatetimePicker(
             label: label,
             hint: hint,
             errorText: state.errorText,
@@ -34,7 +34,7 @@ class BaseLabeledDateTimeFormField extends FormField<DateTime?> {
         });
 }
 
-class BaseLabeledDatetimePicker extends StatefulWidget {
+class BaseDatetimePicker extends StatefulWidget {
   final String label;
   final String hint;
   final ValueChanged<DateTime?>? onDatePicked;
@@ -42,7 +42,7 @@ class BaseLabeledDatetimePicker extends StatefulWidget {
   final DateTime? firstDate;
   final DateTime? lastDate;
   final String? errorText;
-  const BaseLabeledDatetimePicker({
+  const BaseDatetimePicker({
     required this.label,
     required this.hint,
     this.initialDate,
@@ -54,11 +54,10 @@ class BaseLabeledDatetimePicker extends StatefulWidget {
   });
 
   @override
-  State<BaseLabeledDatetimePicker> createState() =>
-      _BaseLabeledDatetimePickerState();
+  State<BaseDatetimePicker> createState() => _BaseDatetimePickerState();
 }
 
-class _BaseLabeledDatetimePickerState extends State<BaseLabeledDatetimePicker> {
+class _BaseDatetimePickerState extends State<BaseDatetimePicker> {
   DateTime? selectedDate;
   @override
   void initState() {
@@ -74,7 +73,7 @@ class _BaseLabeledDatetimePickerState extends State<BaseLabeledDatetimePicker> {
   Widget build(BuildContext context) {
     var styles = Theme.of(context).extension<FormFieldStylesExtenstion>()!;
 
-    return BaseLabeledWidget(
+    return BaseWidget(
         label: widget.label,
         errorText: widget.errorText,
         child: InkWell(

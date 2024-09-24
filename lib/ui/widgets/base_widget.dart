@@ -2,12 +2,12 @@ import 'package:hackathon_fintech_flutter_mobile/shared/theme/theme_extensions/f
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class BaseLabeledWidget extends StatelessWidget {
+class BaseWidget extends StatelessWidget {
   final String label;
   final Widget child;
   final String? errorText;
   final Widget? extra;
-  const BaseLabeledWidget({
+  const BaseWidget({
     required this.label,
     required this.child,
     this.errorText,

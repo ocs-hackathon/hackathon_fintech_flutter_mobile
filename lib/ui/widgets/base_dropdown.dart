@@ -1,8 +1,8 @@
 import 'package:hackathon_fintech_flutter_mobile/shared/theme/theme_extensions/form_field_styles.dart';
-import 'package:hackathon_fintech_flutter_mobile/ui/widgets/base_labeled_widget.dart';
+import 'package:hackathon_fintech_flutter_mobile/ui/widgets/base_widget.dart';
 import 'package:flutter/material.dart';
 
-class BaseLabeledDropdown extends StatefulWidget {
+class BaseDropdown extends StatefulWidget {
   final String label;
   final String hint;
   // key value pair where key is the value of the item and value is the label
@@ -12,7 +12,7 @@ class BaseLabeledDropdown extends StatefulWidget {
   final dynamic initialValue;
 
   final String? Function(dynamic)? validator;
-  const BaseLabeledDropdown(
+  const BaseDropdown(
       {required this.label,
       required this.hint,
       required this.items,
@@ -22,10 +22,10 @@ class BaseLabeledDropdown extends StatefulWidget {
       super.key});
 
   @override
-  State<BaseLabeledDropdown> createState() => _BaseLabeledDropdownState();
+  State<BaseDropdown> createState() => _BaseDropdownState();
 }
 
-class _BaseLabeledDropdownState extends State<BaseLabeledDropdown> {
+class _BaseDropdownState extends State<BaseDropdown> {
   dynamic value;
   String? _errorText;
   @override
@@ -37,7 +37,7 @@ class _BaseLabeledDropdownState extends State<BaseLabeledDropdown> {
   }
 
   @override
-  void didUpdateWidget(covariant BaseLabeledDropdown oldWidget) {
+  void didUpdateWidget(covariant BaseDropdown oldWidget) {
     if (widget.items.containsKey(widget.initialValue)) {
       value = widget.initialValue;
     } else {
@@ -50,7 +50,7 @@ class _BaseLabeledDropdownState extends State<BaseLabeledDropdown> {
   Widget build(BuildContext context) {
     var styles = Theme.of(context).extension<FormFieldStylesExtenstion>()!;
 
-    return BaseLabeledWidget(
+    return BaseWidget(
         label: widget.label,
         errorText: _errorText,
         child: DropdownButtonHideUnderline(

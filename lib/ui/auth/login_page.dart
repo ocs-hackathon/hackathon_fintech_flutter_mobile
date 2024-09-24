@@ -7,7 +7,7 @@ import 'package:hackathon_fintech_flutter_mobile/utils/constants/asset_constants
 import 'package:hackathon_fintech_flutter_mobile/utils/constants/data_constants/ui_constants.dart';
 import 'package:hackathon_fintech_flutter_mobile/utils/helpers/functions.dart';
 
-import '../widgets/base_labeled_textfield.dart';
+import '../widgets/base_textfield.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -25,12 +25,12 @@ class LoginPage extends StatelessWidget {
           kVerticalGap60,
           Column(
             children: [
-              const BaseLabeledTextField(
+              const BaseTextField(
                 label: "Email Address",
                 hint: "Enter your email address",
                 keyboardType: TextInputType.emailAddress,
               ),
-              const BaseLabeledTextField(
+              const BaseTextField(
                 label: "Password",
                 hint: "Enter your password",
               ),
@@ -38,7 +38,7 @@ class LoginPage extends StatelessWidget {
               BaseButton(
                   text: "Login",
                   onTap: () {
-                    Get.toNamed(AppRoutes.kycSelfInfoPage);
+                    Get.toNamed(AppRoutes.userInformationPage);
                     toast("Success", "Login Successful");
                   }),
             ],
