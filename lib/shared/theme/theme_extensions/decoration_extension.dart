@@ -106,12 +106,8 @@ class AppDecorationExtension extends ThemeExtension<AppDecorationExtension> {
     mainBorderedDecoration: AppDecoration.mainBorderedDecoration.copyWith(
         color: AppColors.primaryDarkGreyColor,
         border: Border.all(color: AppColors.primaryWhiteColor)),
-    cardDecoration: AppDecoration.cardDecoration.copyWith(
-      color: AppColors.secondaryLightGreyColor,
-    ),
-    lightCardDecoration: AppDecoration.lightCardDecoration.copyWith(
-      color: AppColors.secondaryLightGreyColor,
-    ),
+    cardDecoration: AppDecoration.cardDecoration,
+    lightCardDecoration: AppDecoration.lightCardDecoration,
     lightBorderedDecoration: AppDecoration.lightBorderedDecoration.copyWith(
       color: AppColors.primaryDarkGreyColor,
       border: Border.all(color: AppColors.primaryWhiteColor, width: 0.5),

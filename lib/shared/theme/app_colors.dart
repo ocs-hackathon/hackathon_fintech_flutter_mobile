@@ -13,10 +13,10 @@ class AppColors {
   static const Color lightPrimaryColor = Color(0xFF5D5669);
 
   // dark grey used in e.g buttons
-  static const Color primaryDarkGreyColor = Color(0xFF18181B);
+  static const Color primaryDarkGreyColor = Color(0xFF5D5669);
 
   // light grey used in e.g light description texts
-  static const Color primaryLightGreyColor = Color(0xFF27272A);
+  static const Color primaryLightGreyColor = Color(0xFF5D5669);
 
   // secondary light grey used in e.g background/disabled sections
   static const Color secondaryLightGreyColor = Color(0xFFF4F4F5);

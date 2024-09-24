@@ -50,6 +50,11 @@ class _KycSelfInfoPageState extends State<KycSelfInfoPage> {
                     label: "Last Name",
                     hint: "Enter your Last name",
                   ),
+                  const BaseLabeledTextField(
+                    label: "Phone Number",
+                    hint: "Enter your phone number",
+                    keyboardType: TextInputType.phone,
+                  ),
                   const BaseLabeledDropdown(
                     label: "Gender",
                     hint: "Select Gender",

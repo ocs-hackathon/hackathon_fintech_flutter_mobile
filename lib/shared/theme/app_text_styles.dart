@@ -20,27 +20,27 @@ class AppTextThemes with AppTextStyles {
 
   static TextTheme get darkTextTheme => TextTheme(
         titleLarge: AppTextStyles.titleLarge
-            .copyWith(color: AppColors.primaryWhiteColor),
+            .copyWith(color: AppColors.primaryDarkGreyColor),
         titleMedium: AppTextStyles.titleMedium
-            .copyWith(color: AppColors.primaryWhiteColor),
+            .copyWith(color: AppColors.primaryDarkGreyColor),
         titleSmall: AppTextStyles.titleSmall
-            .copyWith(color: AppColors.primaryWhiteColor),
+            .copyWith(color: AppColors.primaryDarkGreyColor),
         headlineMedium: AppTextStyles.headlineMedium
-            .copyWith(color: AppColors.primaryWhiteColor),
+            .copyWith(color: AppColors.primaryDarkGreyColor),
         headlineSmall: AppTextStyles.headlineSmall
-            .copyWith(color: AppColors.primaryWhiteColor),
+            .copyWith(color: AppColors.primaryDarkGreyColor),
         bodyLarge: AppTextStyles.bodyLarge
-            .copyWith(color: AppColors.primaryWhiteColor),
+            .copyWith(color: AppColors.primaryDarkGreyColor),
         bodyMedium: AppTextStyles.bodyMedium
-            .copyWith(color: AppColors.primaryWhiteColor),
+            .copyWith(color: AppColors.primaryDarkGreyColor),
         bodySmall: AppTextStyles.bodySmall
-            .copyWith(color: AppColors.primaryWhiteColor),
+            .copyWith(color: AppColors.primaryDarkGreyColor),
         labelMedium: AppTextStyles.labelMedium
-            .copyWith(color: AppColors.primaryWhiteColor),
+            .copyWith(color: AppColors.primaryDarkGreyColor),
         labelLarge: AppTextStyles.labelLarge
-            .copyWith(color: AppColors.primaryWhiteColor),
+            .copyWith(color: AppColors.primaryDarkGreyColor),
         labelSmall: AppTextStyles.labelSmall
-            .copyWith(color: AppColors.primaryWhiteColor),
+            .copyWith(color: AppColors.primaryDarkGreyColor),
       );
 
   static TextTheme get currentTextTheme => Get.textTheme;
@@ -111,21 +111,21 @@ mixin AppTextStyles {
   static TextStyle labelLarge = _defaultTextTheme.labelLarge!.copyWith(
     fontSize: 20,
     fontWeight: FontWeight.w700,
-    color: AppColors.primaryWhiteColor,
+    color: AppColors.primaryDarkGreyColor,
   );
 
   // medium button text style
   static TextStyle labelMedium = _defaultTextTheme.labelMedium!.copyWith(
     fontSize: 16,
     fontWeight: FontWeight.w600,
-    color: AppColors.primaryWhiteColor,
+    color: AppColors.primaryDarkGreyColor,
   );
 
   // light text button text style
   static TextStyle labelSmall = _defaultTextTheme.labelSmall!.copyWith(
     fontSize: 14,
     fontWeight: FontWeight.w500,
-    color: AppColors.primaryWhiteColor,
+    color: AppColors.primaryDarkGreyColor,
   );
 
   // extra text styles
@@ -142,37 +142,37 @@ mixin AppTextStyles {
   static TextStyle cardTitleLarge = _defaultTextTheme.headlineLarge!.copyWith(
     fontSize: 20,
     fontWeight: FontWeight.w400,
-    color: AppColors.primaryWhiteColor,
+    color: AppColors.primaryDarkGreyColor,
   );
 
   static TextStyle cardTitleMedium = _defaultTextTheme.headlineMedium!.copyWith(
     fontSize: 17,
     fontWeight: FontWeight.w700,
-    color: AppColors.primaryWhiteColor,
+    color: AppColors.primaryDarkGreyColor,
   );
 
   static TextStyle cardTitleSmall = _defaultTextTheme.headlineSmall!.copyWith(
     fontSize: 10,
     fontWeight: FontWeight.w400,
-    color: AppColors.primaryWhiteColor,
+    color: AppColors.primaryDarkGreyColor,
   );
 
   static TextStyle cardBodyLarge = _defaultTextTheme.headlineLarge!.copyWith(
     fontSize: 32,
     fontWeight: FontWeight.w900,
-    color: AppColors.primaryWhiteColor,
+    color: AppColors.primaryDarkGreyColor,
   );
 
   static TextStyle cardBodyMedium = _defaultTextTheme.headlineMedium!.copyWith(
     fontSize: 14,
     fontWeight: FontWeight.w500,
-    color: AppColors.primaryWhiteColor,
+    color: AppColors.primaryDarkGreyColor,
   );
 
   static TextStyle cardBodySmall = _defaultTextTheme.headlineSmall!.copyWith(
     fontSize: 12,
     fontWeight: FontWeight.w700,
-    color: AppColors.primaryWhiteColor,
+    color: AppColors.primaryDarkGreyColor,
   );
 
   // form field text styles
