@@ -5,21 +5,31 @@ import 'package:hackathon_fintech_flutter_mobile/utils/constants/data_constants/
 class BaseEmptyPage extends StatelessWidget {
   final Widget child;
   final bool withPadding;
-  const BaseEmptyPage(
-      {required this.child, this.withPadding = true, super.key});
+  final Widget? loader;
+  const BaseEmptyPage({
+    required this.child,
+    this.withPadding = true,
+    this.loader,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: true,
-      body: Container(
-        padding: withPadding ? kScreenPadding : null,
-        width: double.infinity,
-        height: double.infinity,
-        decoration: Theme.of(context)
-            .extension<AppDecorationExtension>()!
-            .mainBackgroundDecoration,
-        child: child,
+      resizeToAvoidBottomInset: false,
+      body: Stack(
+        children: [
+          Container(
+            padding: withPadding ? kScreenPadding : null,
+            width: double.infinity,
+            height: double.infinity,
+            decoration: Theme.of(context)
+                .extension<AppDecorationExtension>()!
+                .mainBackgroundDecoration,
+            child: child,
+          ),
+          if (loader != null) loader!
+        ],
       ),
     );
   }

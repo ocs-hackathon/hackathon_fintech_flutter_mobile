@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:hackathon_fintech_flutter_mobile/utils/helpers/functions.dart';
 import 'package:http_parser/http_parser.dart';
 
@@ -29,7 +28,7 @@ class DioClient {
 
     _dio
       ..options = BaseOptions(
-        baseUrl: baseUrl ?? dotenv.env["BASE_URL"]!,
+        baseUrl: baseUrl ?? "http://10.0.2.2:4000/",
         connectTimeout: const Duration(seconds: 300),
         receiveTimeout: const Duration(seconds: 300),
         followRedirects: false,
@@ -272,6 +271,6 @@ class DioClient {
   }
 
   void resetUrl() {
-    _dio.options.baseUrl = dotenv.env['BASE_URL']!;
+    _dio.options.baseUrl = "http://10.0.2.2:4000/";
   }
 }

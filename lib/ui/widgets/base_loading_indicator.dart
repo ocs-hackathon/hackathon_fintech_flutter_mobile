@@ -36,7 +36,7 @@ class _BaseLoadingIndicatorState extends State<BaseLoadingIndicator>
       child: Stack(
         alignment: Alignment.center,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 80,
             width: 80,
             child: CircularProgressIndicator(

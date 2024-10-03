@@ -3,8 +3,9 @@ import 'package:get/get.dart';
 import 'package:hackathon_fintech_flutter_mobile/shared/routes/app_pages.dart';
 import 'package:hackathon_fintech_flutter_mobile/shared/routes/app_routes.dart';
 import 'package:hackathon_fintech_flutter_mobile/shared/theme/custom_theme.dart';
+import 'package:hackathon_fintech_flutter_mobile/ui/bindings/init_bindings.dart';
 
-void main() {
+Future<void> main() async {
   runApp(const MyApp());
 }
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       getPages: AppPages.pages,
       initialRoute: AppRoutes.signupPage,
       theme: CustomTheme().lightTheme,
-      // darkTheme: CustomTheme().darkTheme,
+      initialBinding: InitBindings(),
     );
   }
 }

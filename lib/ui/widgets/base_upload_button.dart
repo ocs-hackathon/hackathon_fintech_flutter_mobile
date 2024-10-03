@@ -79,6 +79,7 @@ class _BaseUploadButtonState extends State<BaseUploadButton> {
             const SizedBox(
               height: 10,
             ),
+            if (displayText != null) Text(displayText!),
             BaseButton(
               text: "Select File",
               onTap: () async {

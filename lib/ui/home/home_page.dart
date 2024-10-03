@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hackathon_fintech_flutter_mobile/shared/theme/app_colors.dart';
 import 'package:hackathon_fintech_flutter_mobile/ui/home/home_screens/main_screen.dart';
 import 'package:hackathon_fintech_flutter_mobile/ui/home/home_screens/market_screen.dart';
-import 'package:hackathon_fintech_flutter_mobile/ui/home/home_screens/profile_screen.dart';
 import 'package:hackathon_fintech_flutter_mobile/ui/widgets/base_empty_page.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
@@ -25,10 +24,10 @@ class _HomePageState extends State<HomePage> {
           bottomScreenMargin: 0,
           context,
           controller: _controller,
-          screens: const [
+          screens: [
             MainScreen(),
             MarketScreen(),
-            ProfileScreen(),
+            // const ProfileScreen(),
           ],
           items: _navBarsItems(),
           navBarHeight: kBottomNavigationBarHeight,
@@ -53,13 +52,13 @@ class _HomePageState extends State<HomePage> {
         textStyle: Theme.of(context).textTheme.bodyMedium,
         inactiveColorPrimary: Colors.grey,
       ),
-      PersistentBottomNavBarItem(
-        icon: const Icon(Icons.person),
-        title: "Profile",
-        activeColorPrimary: AppColors.primaryBlackColor,
-        textStyle: Theme.of(context).textTheme.bodyMedium,
-        inactiveColorPrimary: Colors.grey,
-      ),
+      // PersistentBottomNavBarItem(
+      //   icon: const Icon(Icons.person),
+      //   title: "Profile",
+      //   activeColorPrimary: AppColors.primaryBlackColor,
+      //   textStyle: Theme.of(context).textTheme.bodyMedium,
+      //   inactiveColorPrimary: Colors.grey,
+      // ),
     ];
   }
 }
