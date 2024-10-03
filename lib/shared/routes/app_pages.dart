@@ -11,11 +11,11 @@ abstract class AppPages {
     // auth
     GetPage(
       name: AppRoutes.signupPage,
-      page: () => const SignupPage(),
+      page: () => SignupPage(),
     ),
     GetPage(
       name: AppRoutes.loginPage,
-      page: () => const LoginPage(),
+      page: () => LoginPage(),
     ),
 
     //kyc

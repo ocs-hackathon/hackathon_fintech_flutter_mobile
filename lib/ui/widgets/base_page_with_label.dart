@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hackathon_fintech_flutter_mobile/ui/widgets/base_back_button.dart';
 import 'package:hackathon_fintech_flutter_mobile/ui/widgets/base_button.dart';
 import 'package:hackathon_fintech_flutter_mobile/ui/widgets/base_empty_page.dart';
 

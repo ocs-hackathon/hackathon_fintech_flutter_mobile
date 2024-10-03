@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -27,4 +28,11 @@ void toast(
       snackPosition: SnackPosition.TOP,
       backgroundColor: color,
       colorText: Colors.white);
+}
+
+outlog(
+  Object data, {
+  String? title = "",
+}) {
+  log("$title $data");
 }
